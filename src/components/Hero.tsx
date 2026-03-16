@@ -37,17 +37,13 @@ export default function Hero() {
         </FadeInView>
       </div>
 
-      {/* Right image panel */}
-      <div className="relative min-h-[50vh] md:min-h-screen overflow-hidden">
-        <img
-          src="https://static.wixstatic.com/media/c837a6_6b7a0d8d8a8f4c6c9a0e6b9c8d7e6f5a~mv2.jpg/v1/fill/w_1200,h_1600,al_c,q_90/lifestyle-sandals.jpg"
-          alt="Solimar lifestyle sandals"
-          className="w-full h-full object-cover"
-          onError={(e) => {
-            (e.target as HTMLImageElement).style.background = "linear-gradient(135deg, #C0562A 0%, #B8916A 100%)";
-            (e.target as HTMLImageElement).src = "";
-          }}
-        />
+      {/* Right image panel — gradient placeholder until real photos arrive */}
+      <div className="relative min-h-[50vh] md:min-h-screen overflow-hidden bg-gradient-to-br from-terracotta/80 via-gold/60 to-terracotta/40">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="text-white/30 text-xs font-medium uppercase" style={{ letterSpacing: "2px" }}>
+            Lifestyle Photo — Coming Soon
+          </span>
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-deep-brown/20 to-transparent" />
       </div>
     </section>
