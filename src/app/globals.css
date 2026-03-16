@@ -2,22 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: #1A1612;
+  background: #F9F5EF;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  cursor: default;
+}
+
+::selection {
+  background: #C0562A;
+  color: #F9F5EF;
+}
+
+/* Custom cursor */
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
 }
 
 @layer utilities {
