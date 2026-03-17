@@ -22,13 +22,13 @@ const pillars = [
 
 export default function BrandPillars() {
   return (
-    <section className="py-32 px-6">
+    <section className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <FadeInView>
-          <p className="text-sm font-medium text-terracotta text-center mb-4 uppercase" style={{ letterSpacing: "3px" }}>
+          <p className="font-display text-sm font-medium text-terracotta text-center mb-4 uppercase italic" style={{ letterSpacing: "3px" }}>
             Nuestra Promesa
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-center text-deep-brown mb-20" style={{ letterSpacing: "-1px" }}>
+          <h2 className="font-body text-3xl md:text-4xl font-extrabold text-center text-deep-brown mb-16" style={{ letterSpacing: "-0.5px" }}>
             Diseñadas para tu vida
           </h2>
         </FadeInView>
@@ -38,7 +38,7 @@ export default function BrandPillars() {
             <FadeInView key={pillar.title} delay={i * 0.15}>
               <div className="text-center">
                 <span className="text-4xl mb-6 block">{pillar.icon}</span>
-                <h3 className="font-display text-2xl font-bold text-deep-brown mb-4">
+                <h3 className="font-body text-xl font-bold text-deep-brown mb-4">
                   {pillar.title}
                 </h3>
                 <p className="text-deep-brown/60 leading-relaxed">

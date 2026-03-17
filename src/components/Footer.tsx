@@ -1,3 +1,5 @@
+import Logo from "./Logo";
+
 const navLinks = [
   { href: "#colecciones", label: "Colecciones" },
   { href: "#productos", label: "Productos" },
@@ -15,13 +17,13 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-deep-brown text-cream/70 pt-20 pb-10 px-6">
+    <footer className="bg-deep-brown text-cream/70 pt-16 pb-10 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-12 mb-16">
+        <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <a href="#" className="font-display text-3xl font-bold text-cream block mb-4">
-              Solimar<span className="text-terracotta">®</span>
+            <a href="#" className="block mb-4">
+              <Logo className="h-8 w-auto" color="light" />
             </a>
             <p className="text-sm leading-relaxed max-w-sm mb-6">
               Sandalias colombianas diseñadas para el confort y el estilo.
@@ -63,7 +65,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
         <div className="border-t border-cream/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-cream/40">

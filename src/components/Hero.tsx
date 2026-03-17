@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import FadeInView from "./FadeInView";
 
 export default function Hero() {
@@ -12,7 +13,7 @@ export default function Hero() {
             Sandalias con Alma Colombiana
           </p>
           <h1
-            className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-deep-brown leading-[1.1] mb-6"
+            className="font-body text-5xl md:text-6xl lg:text-7xl font-extrabold text-deep-brown leading-[1.1] mb-6"
             style={{ letterSpacing: "-1px" }}
           >
             Cada paso,<br />un estilo
@@ -23,13 +24,13 @@ export default function Hero() {
           <div className="flex gap-4">
             <a
               href="#productos"
-              className="inline-block text-sm font-semibold bg-terracotta text-cream px-8 py-3.5 hover:bg-terracotta/90 transition-colors"
+              className="inline-block text-sm font-semibold bg-terracotta text-cream px-8 py-3.5 hover:bg-terracotta/90 transition-colors rounded-full"
             >
               Ver Colección
             </a>
             <a
               href="#historia"
-              className="inline-block text-sm font-semibold border-2 border-deep-brown/20 text-deep-brown px-8 py-3.5 hover:border-deep-brown/40 transition-colors"
+              className="inline-block text-sm font-semibold border-2 border-deep-brown/20 text-deep-brown px-8 py-3.5 hover:border-deep-brown/40 transition-colors rounded-full"
             >
               Nuestra Historia
             </a>
@@ -37,13 +38,16 @@ export default function Hero() {
         </FadeInView>
       </div>
 
-      {/* Right image panel — gradient placeholder until real photos arrive */}
-      <div className="relative min-h-[50vh] md:min-h-screen overflow-hidden bg-gradient-to-br from-terracotta/80 via-gold/60 to-terracotta/40">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-white/30 text-xs font-medium uppercase" style={{ letterSpacing: "2px" }}>
-            Lifestyle Photo — Coming Soon
-          </span>
-        </div>
+      {/* Right image panel */}
+      <div className="relative min-h-[50vh] md:min-h-screen overflow-hidden">
+        <Image
+          src="https://static.wixstatic.com/media/0cefb2_8b065434770f4b7aac353da2610278c4~mv2.jpg"
+          alt="Solimar lifestyle sandals"
+          fill
+          className="object-cover"
+          priority
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-deep-brown/20 to-transparent" />
       </div>
     </section>

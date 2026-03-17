@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Logo from "./Logo";
 
 const links = [
   { href: "#colecciones", label: "Colecciones" },
@@ -26,12 +27,10 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
-        {/* Logo */}
-        <a href="#" className="font-display text-2xl font-bold text-deep-brown tracking-wide">
-          Solimar<span className="text-terracotta">®</span>
+        <a href="#">
+          <Logo className="h-8 w-auto" />
         </a>
 
-        {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
             <a
@@ -44,11 +43,10 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* CTA + mobile toggle */}
         <div className="flex items-center gap-4">
           <a
             href="#donde-comprar"
-            className="hidden md:inline-block text-sm font-semibold bg-terracotta text-cream px-6 py-2.5 hover:bg-terracotta/90 transition-colors"
+            className="hidden md:inline-block text-sm font-semibold bg-terracotta text-cream px-6 py-2.5 hover:bg-terracotta/90 transition-colors rounded-full"
           >
             Comprar Ahora
           </a>
@@ -67,7 +65,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-cream border-t border-deep-brown/10 px-6 py-6 space-y-4">
           {links.map((link) => (
@@ -83,7 +80,7 @@ export default function Navbar() {
           <a
             href="#donde-comprar"
             onClick={() => setMenuOpen(false)}
-            className="block text-center text-sm font-semibold bg-terracotta text-cream px-6 py-3 mt-4"
+            className="block text-center text-sm font-semibold bg-terracotta text-cream px-6 py-3 mt-4 rounded-full"
           >
             Comprar Ahora
           </a>
